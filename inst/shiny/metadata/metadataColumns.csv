@@ -1,0 +1,117 @@
+colname,colnameDisplay,trait,traitType,levels,comment
+VBN_CODE,VBN_CODE,No,,,
+VBN_PRODUCTNAAM_NL,VBN_PRODUCTNAAM_NL,No,,,
+VKCNr,VKCNr,No,,,
+filename,image,No,,,
+Bloeiwijze,Bloeiwijze,Yes,factor,,
+Bloemkleur,Bloemkleur,Yes,factor,,Actually a color
+Bloemkleur1,Bloemkleur1,Yes,factor,,Actually a color
+BloemRHS,BloemRHS,Yes,RHS,,
+BloemRHS1,BloemRHS1,Yes,RHS,,
+Bloemkleurverdeling,Bloemkleurverdeling,Yes,factor,,
+Bloemkleurverdeling1,Bloemkleurverdeling1,Yes,factor,,
+Bloemnevenkleur,Bloemnevenkleur,Yes,factor,,Actually a color
+Bloemnevenkleur1,Bloemnevenkleur1,Yes,factor,,Actually a color
+Bloemtype,Bloemtype,Yes,factor,,
+Bloemtype1,Bloemtype1,Yes,factor,,
+rasnummer,rasnummer,No,,,
+RVPnr,RVPnr,No,,,
+X1.Blad..lengte,X1 Blad lengte,Yes,ordered,long,
+X2.Blad..breedte,X2 Blad breedte,Yes,ordered,broad,
+X3.Bladschijf..bobbeling,X3 Bladschijf bobbeling,Yes,ordered,strong,
+X4.Bladschijf..beharing.van.de.bovenzijde..middennerf.uitgezonderd.,X4 Bladschijf beharing van de bovenzijde middennerf uitgezonderd ,Yes,ordered,dense,
+X5.Bladschijf..diepte.van.de.insnijdingen.van.het.middelste.derde.deel,X5 Bladschijf diepte van de insnijdingen van het middelste derde deel,Yes,ordered,deep,
+X6.Bladschijf..groene.kleur.van.de.bovenzijde,X6 Bladschijf groene kleur van de bovenzijde,Yes,ordered,dark,
+X7.Bladschijf..vorm.top,X7 Bladschijf vorm top,Yes,factor,,Could be ordered. Not sure
+X8.Bloemstengel..lengte,X8 Bloemstengel lengte,Yes,ordered,long,
+X9.Bloemstengel..intensiteit.van.de.anthocyaankleuring.aan.de.basis,X9 Bloemstengel intensiteit van de anthocyaankleuring aan de basis,Yes,ordered,strong,
+X10.Bloeistengel..anthocyaankleuring.aan.de.top,X10 Bloeistengel anthocyaankleuring aan de top,Yes,factor,,
+X11.Bloemstengel..bracteeën.beneden.de.bloeiwijze,X11 Bloemstengel bracteeën beneden de bloeiwijze,Yes,factor,,
+X12.Bloemhoofdje..type,X12 Bloemhoofdje type,Yes,factor,,
+X13.Bloemhoofdje..diameter,X13 Bloemhoofdje diameter,Yes,ordered,large,
+X14.Bloemhoofdje..diameter.van.de.binnenste.lintbloemen.in.verhouding.tot.die.van.het.bloemhoofdje,X14 Bloemhoofdje diameter van de binnenste lintbloemen in verhouding tot die van het bloemhoofdje,Yes,ordered,large,
+X15.Bloemhoofdje..rand.van.de.binnenste.lintbloemen,X15 Bloemhoofdje rand van de binnenste lintbloemen,Yes,factor,,
+X16.Bloemhoofdje..hoogte.van.het.omwindsel,X16 Bloemhoofdje hoogte van het omwindsel,Yes,ordered,tall,
+X17.Bloemhoofdje..diameter.van.het.omwindsel,X17 Bloemhoofdje diameter van het omwindsel,Yes,ordered,large,
+X18.Bloemhoofdje..positie.van.het.distale.gedeelte.van.de.omwindselbladen.t.o.v..de.buitenste.lintbloemen,X18 Bloemhoofdje positie van het distale gedeelte van de omwindselbladen t o v de buitenste lintbloemen,Yes,factor,,
+X19.Bloemhoofdje..anthocyaankleuring.aan.de.distale.helft.van.de.binnenste.omwindselbladen,X19 Bloemhoofdje anthocyaankleuring aan de distale helft van de binnenste omwindselbladen,Yes,factor,,
+X20.Bloemhoofdje..intensiteit.van.de.anthocyaankleuring.aan.distale.helft.van.de.binnenste.omwindselbladen,X20 Bloemhoofdje intensiteit van de anthocyaankleuring aan distale helft van de binnenste omwindselbladen,Yes,ordered,strong,
+X21.Buitenste.lintbloem..niveau.van.het.topje.t.o.v..de.top.van.het.omwindsel,X21 Buitenste lintbloem niveau van het topje t o v de top van het omwindsel,Yes,factor,,
+X22.Buitenste.lintbloem..vorm,X22 Buitenste lintbloem vorm,Yes,factor,,Could be ordered. Not sure
+X23.Buitenste.lintbloem..lengteas,X23 Buitenste lintbloem lengteas,Yes,factor,,Could be ordered. Not sure
+X24.Binnenste.lintbloem..lengteas,X24 Binnenste lintbloem lengteas,Yes,factor,,Could be ordered. Not sure
+X25.Buitenste.lintbloem..profiel.van.de.dwarsdoorsnede.van.het.midden.van.het.lint,X25 Buitenste lintbloem profiel van de dwarsdoorsnede van het midden van het lint,Yes,factor,,
+X26.Buitenste.lintbloem..lengte,X26 Buitenste lintbloem lengte,Yes,ordered,large,
+X27.Buitenste.lintbloem..breedte,X27 Buitenste lintbloem breedte,Yes,ordered,broad,
+X28.Buitenste.lintbloem..vorm.van.de.top,X28 Buitenste lintbloem vorm van de top,Yes,factor,,
+X29.Buitenste.lintbloem..diepte.van.de.insnijdingen,X29 Buitenste lintbloem diepte van de insnijdingen,Yes,ordered,deep,
+X30.Buitenste.lintbloem..neiging.tot.vorming.lange.vrije.kroonbuisslippen,X30 Buitenste lintbloem neiging tot vorming lange vrije kroonbuisslippen,Yes,factor,,
+X31.Buitenste.lintbloem..kleur.van.de.binnenkant,X31 Buitenste lintbloem kleur van de binnenkant,Yes,factor,,
+X31.expressie,X31 expressie,Yes,RHS,,
+X31.1.Buitenste.lintbloem..kleurgroep..als.bij.31.,X31 1 Buitenste lintbloem kleurgroep als bij 31 ,Yes,factor,,Actually a color
+X32.Buitenste.lintbloem..aantal.kleuren,X32 Buitenste lintbloem aantal kleuren,Yes,factor,,
+X33.Alleen.buitenste.lintbloem..kleurverdeling,X33 Alleen buitenste lintbloem kleurverdeling,Yes,factor,,
+X34.Buitenste.lintbloem..streping,X34 Buitenste lintbloem streping,Yes,factor,,
+X35.Buitenste.lintbloem..tweede.kleur.op.basale.helft,X35 Buitenste lintbloem tweede kleur op basale helft,Yes,factor,,
+X36.Buitenste.lintbloem..tweede.kleur.op.distale.helft,X36 Buitenste lintbloem tweede kleur op distale helft,Yes,factor,,
+X37.Buitenste.lintbloem..tweede.kleur.aan.de.rand,X37 Buitenste lintbloem tweede kleur aan de rand,Yes,factor,,
+X38.Buitenste.lintbloem..tweede.kleur.alleen.aan.de.top,X38 Buitenste lintbloem tweede kleur alleen aan de top,Yes,factor,,
+X39.Buitenste.lintbloem..tweede.kleur,X39 Buitenste lintbloem tweede kleur,Yes,factor,,Actually a color
+X40.Buitenste.lintbloem..hoofdkleur.van.de.buitenkant,X40 Buitenste lintbloem hoofdkleur van de buitenkant,Yes,factor,,Actually a color
+X41.Schijf..diameter,X41 Schijf diameter,Yes,ordered,large,
+X42.Donkere.schijf..voor.opening.van.de.buisbloemen.,X42 Donkere schijf voor opening van de buisbloemen ,Yes,factor,,
+X43.Schijfbloemen.van.de.buitenste.rijen..hoofdkleur.van.de.bloemdekslippen,X43 Schijfbloemen van de buitenste rijen hoofdkleur van de bloemdekslippen,Yes,color,,
+X44.Schijfbloemen.van.de.buitenste.rijen..hoofdkleur.van.de.bloemdekslippen,X44 Schijfbloemen van de buitenste rijen hoofdkleur van de bloemdekslippen,Yes,factor,,
+X44.expressie,X44 expressie,Yes,RHS,,
+X44.1.Schijfbloemen.van.de.buitenste.rijen..kleurgroep,X44 1 Schijfbloemen van de buitenste rijen kleurgroep,Yes,factor,,Actually a color
+X45.Schijf..hoofdkleur.van.de.bloemdekslippen.van.de.bisexuele.bloemen,X45 Schijf hoofdkleur van de bloemdekslippen van de bisexuele bloemen,Yes,factor,,Actually a color
+X46.Stijl..hoofdkleur.van.de.distale.helft,X46 Stijl hoofdkleur van de distale helft,Yes,factor,,Actually a color
+X47.Stempel..hoofdkleur,X47 Stempel hoofdkleur,Yes,factor,,Actually a color
+X48.Meeldraden..hoofdkleur,X48 Meeldraden hoofdkleur,Yes,factor,,Actually a color
+X49.Meeldraden..kleur.van.de.top.t.o.v..de.andere.delen,X49 Meeldraden kleur van de top t o v de andere delen,Yes,factor,,Could be ordered. Not sure
+X50.Meeldraden..lengtestrepen,X50 Meeldraden lengtestrepen,Yes,factor,,
+X51.Vruchtpluis..kleur.van.de.top.in.vergelijking.met.die.van.andere.delen,X51 Vruchtpluis kleur van de top in vergelijking met die van andere delen,Yes,factor,,Could be ordered. Not sure
+X52.Vruchtpluis..niveau.van.de.top.t.o.v..de.gesloten.buisbloemen,X52 Vruchtpluis niveau van de top t o v de gesloten buisbloemen,Yes,factor,,
+jaartal,jaartal,No,factor,,
+X3.Plant..hoogte..tijdens.tweede.bloeiperiode.,X3 Plant hoogte tijdens tweede bloeiperiode ,Yes,ordered,tall,
+X4.Jonge.scheut..anthocyaankleuring,X4 Jonge scheut anthocyaankleuring,Yes,factor,,
+X5.Jonge.scheut..intensiteit.van.de.anthocyaankleuring,X5 Jonge scheut intensiteit van de anthocyaankleuring,Yes,ordered,strong,
+X6.Stengel..aantal.stekels..uitgezonderd.zeer.kleine.en.haarachtige.stekels.,X6 Stengel aantal stekels uitgezonderd zeer kleine en haarachtige stekels ,Yes,ordered,many,
+X7.Stekels..dominerende.kleur..als.bij.6.,X7 Stekels dominerende kleur als bij 6 ,Yes,factor,,
+X8.Blad..grootte,X8 Blad grootte,Yes,ordered,large,
+X9.Blad..intensiteit.groenkleur..bovenzijde.,X9 Blad intensiteit groenkleur bovenzijde ,Yes,ordered,dark,
+X11.Blad..glans.bovenzijde,X11 Blad glans bovenzijde,Yes,ordered,strong,
+X12.Blaadje..golving.van.de.rand,X12 Blaadje golving van de rand,Yes,ordered,strong,
+X13.Eindblaadje..vorm.van.de.schijf,X13 Eindblaadje vorm van de schijf,Yes,factor,,Could be ordered. Not sure
+X14.Eindblaadje..vorm.van.de.basis.van.de.schijf,X14 Eindblaadje vorm van de basis van de schijf,Yes,factor,,
+X15.Eindblaadje..vorm.van.de.top.van.de.schijf,X15 Eindblaadje vorm van de top van de schijf,Yes,factor,,
+X22.Bloem..aantal.petalen,X22 Bloem aantal petalen,Yes,ordered,many,
+X23.Bloem..kleurgroep,X23 Bloem kleurgroep,Yes,factor,,Actually a color
+X26.Bloem..diameter,X26 Bloem diameter,Yes,ordered,long,
+X27.Bloem..vorm,X27 Bloem vorm,Yes,factor,,
+X28.Bloem..zijaanzicht.van.het.bovenste.deel,X28 Bloem zijaanzicht van het bovenste deel,Yes,factor,,
+X29.Bloem..zijaanzicht.van.het.onderste.deel,X29 Bloem zijaanzicht van het onderste deel,Yes,factor,,
+X30.Bloem..geur,X30 Bloem geur,Yes,ordered,strong2,
+X31.Sepaal..uitsteeksels,X31 Sepaal uitsteeksels,Yes,ordered,strong,
+X32.Petalen..opeenvolgende.terugbuiging.van.de.bloemblaadjes,X32 Petalen opeenvolgende terugbuiging van de bloemblaadjes,Yes,factor,,
+X33.Petaal..vorm,X33 Petaal vorm,Yes,factor,,
+X34.Petaal..insnijdingen,X34 Petaal insnijdingen,Yes,ordered,strong,
+X35.Petaal..buiging.van.de.rand,X35 Petaal buiging van de rand,Yes,ordered,strong,
+X36.Petaal..golving,X36 Petaal golving,Yes,ordered,strong,
+X38.Petaal..lengte,X38 Petaal lengte,Yes,ordered,long,
+X39.Petaal..breedte,X39 Petaal breedte,Yes,ordered,broad,
+X40.Petaal..aantal.kleuren.op.de.binnenzijde..basisvlek.uitgezonderd.,X40 Petaal aantal kleuren op de binnenzijde basisvlek uitgezonderd ,Yes,factor,,
+X41.Petaal..intensiteit.van.de.kleur..basisvlek.uitgezonderd.,X41 Petaal intensiteit van de kleur basisvlek uitgezonderd ,Yes,factor,,
+X42.Petaal..hoofdkleur.op.de.binnenzijde.E.nr....of.X,X42 Petaal hoofdkleur op de binnenzijde E nr of X,Yes,color,,
+X42.Petaal..hoofdkleur.op.de.binnenzijde.RHS.code,X42 Petaal hoofdkleur op de binnenzijde RHS code,Yes,RHS,,
+X43.Petaal..tweede.kleur..basisvlek.uitgezonderd..E.nr....of.X,X43 Petaal tweede kleur basisvlek uitgezonderd E nr of X,Yes,color,,
+X43.Petaal..tweede.kleur..basisvlek.uitgezonderd..RHS.code,X43 Petaal tweede kleur basisvlek uitgezonderd RHS code,Yes,RHS,,
+X44.Petaal..derde.kleur..basisvlek.uitgezonderd.,X44 Petaal derde kleur basisvlek uitgezonderd ,Yes,factor,,Actually a color
+X45.Petaal..verdeling.van.de.tweede.kleur.op.de.binnenzijde..basisvlek.uitgezonderd.,X45 Petaal verdeling van de tweede kleur op de binnenzijde basisvlek uitgezonderd ,Yes,factor,,
+X46.Petaal..verdeling.van.de.derde.kleur.op.de.binnenzijde..basisvlek.uitgezonderd.,X46 Petaal verdeling van de derde kleur op de binnenzijde basisvlek uitgezonderd ,Yes,factor,,
+X47.Petaal..basisvlek.op.de.binnenzijde,X47 Petaal basisvlek op de binnenzijde,Yes,factor,,
+X48.Petaal..grootte.van.de.basisvlek.op.de.binnenzijde,X48 Petaal grootte van de basisvlek op de binnenzijde,Yes,ordered,large,
+X49.Petaal..kleur.van.de.basisvlek.op.de.binnenzijde,X49 Petaal kleur van de basisvlek op de binnenzijde,Yes,factor,,Actually a color
+X50.Petaal..hoofdkleur.van.de.buitenzijde..alleen.indien.duidelijk.afwijkend.van.de.binnenzijde..E.nr....of.X,X50 Petaal hoofdkleur van de buitenzijde alleen indien duidelijk afwijkend van de binnenzijde E nr of X,Yes,color,,
+X50.Petaal..hoofdkleur.van.de.buitenzijde..alleen.indien.duidelijk.afwijkend.van.de.binnenzijde..RHS.code,X50 Petaal hoofdkleur van de buitenzijde alleen indien duidelijk afwijkend van de binnenzijde RHS code,Yes,RHS,,
+X51.Buitenste.meeldraden..dominerende.kleur.van.de.helmdraad,X51 Buitenste meeldraden dominerende kleur van de helmdraad,Yes,factor,,Actually a color

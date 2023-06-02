@@ -81,8 +81,6 @@ showColTab <- function(colTab, nr, nc, nrmax = 10, ncmax = 10,
        cex = cex)
 }
 
-## showColTab(colTranslation[1:25,], 5, 5)
-
 #' pal
 #'
 #' Function to show a colour histogram, obtained by, e.g., clustering
@@ -440,12 +438,6 @@ hex2colClass <- function(colest, colTable)
   cbind(colest, colrgb, colTable[idx,])
 }
 
-
-## mycols <- c("#FE7798", "#F8BC02", "#BF0139")
-## hex2colClass(mycols, colTranslation)
-## colrgb <- hex2rgb(mycols)
-## idx <- rgb2idx(colrgb, colTranslation)
-
 #' cleanColorGroup
 #'
 #' Function to split composite colors into elements consisting only of
@@ -543,14 +535,3 @@ showRHSquantile <- function(rhsq, id = 2, plot = TRUE, ...) {
   }
 }
 
-## ## Let's try
-## ii <- 1
-## flname <-
-##   list.files(path = "Data/Naktuinbouw/Gerbera",
-##              pattern = NakResultG[ii,"ID"], full.names = TRUE)
-## debug(getRMSquantile)
-## getRMSquantile(NakResultG[ii, "RHS"], flname,
-##                colTable = colTranslation, quant = c(.1, .25, .5))
-## getRMSquantile(NakResultG[ii, "RHS"], flname,
-##                colTable = colTranslation, quant = c(.1, .25, .5),
-##                cspace = "HCL")

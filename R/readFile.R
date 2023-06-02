@@ -3,8 +3,8 @@
 #' @export
 readFile <- function(infile) {
   ## Get meta data.
-  columnMeta <- read.csv("metadata/metadataColumns.csv")
-  orderedFactMeta <- read.csv("metadata/metadataOrderedFactors.csv")
+  columnMeta <- read.csv("data-raw/metadataColumns.csv")
+  orderedFactMeta <- read.csv("data-raw/metadataOrderedFactors.csv")
   ## Input file.
   indat <- read.csv(infile)
 

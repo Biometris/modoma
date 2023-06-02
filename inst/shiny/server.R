@@ -4,58 +4,61 @@ shinyServer(function(input,
 
   reacVals <- reactiveValues()
 
-  shinyDirChoose(input = input,
-                 id = "imageDir",
-                 roots = getVolumes()(),
-                 filetypes = c("", "txt", "bigWig", "tsv", "csv", "bw"),
-                 allowDirCreate = FALSE)
+  # shinyDirChoose(input = input,
+  #                id = "imageDir",
+  #                roots = getVolumes()(),
+  #                filetypes = c("", "txt", "bigWig", "tsv", "csv", "bw"),
+  #                allowDirCreate = FALSE)
 
   ## Read the input data.
   ## The image files are processed in this part.
   ## Also extra columns are added for the columns containing RHS values
   ## The columns contain the corresponding hex color used as background.
   inputDat <- reactive({
-    req(input$infile, !inherits(input$imageDir, "shinyActionButtonValue"))
+    # req(input$infile, !inherits(input$imageDir, "shinyActionButtonValue"))
+    #
+    # ## Read input.
+    # inputDat <- try(readFile(input$infile$datapath))
+    # if (inherits(inputDat, "try-error")) {
+    #   shinyjs::alert("Error trying to read file.\n Please check the settings.")
+    # }
+    #
+    # reacVals$filenameVar <- attr(inputDat, "filenameVar")
+    #
+    # ## Convert filename to image.
+    # if (isTRUE(hasName(inputDat, reacVals$filenameVar))) {
+    #   inputDat[[reacVals$filenameVar]] <-
+    #     imgUri(inputDat[[reacVals$filenameVar]],
+    #            imageFolder = parseDirPath(getVolumes()(), input$imageDir))
+    #
+    #   ## Move picture to first position.
+    #   inputDat <-
+    #     inputDat[c(reacVals$filenameVar,
+    #                colnames(inputDat)[colnames(inputDat) != reacVals$filenameVar])]
+    # }
+    #
+    # data("colTranslation")
+    #
+    # rgb2hex <- function(vec) {
+    #   if (any(is.na(vec))) return(NA)
+    #   rgb(vec[1], vec[2], vec[3], maxColorValue = 255)
+    # }
+    #
+    # RHScols <- colnames(inputDat)[sapply(inputDat, class) == "RHS"]
+    # for (RHScol in RHScols) {
+    #   rhscodes <- cleanRHS(inputDat[[RHScol]], colTranslation$RHS)
+    #   rgbcols <- rhs2rgb(rhscodes, colTranslation)
+    #
+    #   inputDat[[paste0("colors", RHScol)]] <- apply(rgbcols, 1, rgb2hex)
+    # }
+    #
+    # ## Reset inputs.
+    # shinyjs::reset("tabs")
+    # removeUI("#resTab")
+    # removeUI("#resTabTr")
 
-    ## Read input.
-    inputDat <- try(readFile(input$infile$datapath))
-    if (inherits(inputDat, "try-error")) {
-      shinyjs::alert("Error trying to read file.\n Please check the settings.")
-    }
-
-    reacVals$filenameVar <- attr(inputDat, "filenameVar")
-
-    ## Convert filename to image.
-    if (isTRUE(hasName(inputDat, reacVals$filenameVar))) {
-      inputDat[[reacVals$filenameVar]] <-
-        imgUri(inputDat[[reacVals$filenameVar]],
-               imageFolder = parseDirPath(getVolumes()(), input$imageDir))
-
-      ## Move picture to first position.
-      inputDat <-
-        inputDat[c(reacVals$filenameVar,
-                   colnames(inputDat)[colnames(inputDat) != reacVals$filenameVar])]
-    }
-
-    data("colTranslation")
-
-    rgb2hex <- function(vec) {
-      if (any(is.na(vec))) return(NA)
-      rgb(vec[1], vec[2], vec[3], maxColorValue = 255)
-    }
-
-    RHScols <- colnames(inputDat)[sapply(inputDat, class) == "RHS"]
-    for (RHScol in RHScols) {
-      rhscodes <- cleanRHS(inputDat[[RHScol]], colTranslation$RHS)
-      rgbcols <- rhs2rgb(rhscodes, colTranslation)
-
-      inputDat[[paste0("colors", RHScol)]] <- apply(rgbcols, 1, rgb2hex)
-    }
-
-    ## Reset inputs.
-    shinyjs::reset("tabs")
-    removeUI("#resTab")
-    removeUI("#resTabTr")
+    inputDat <- florGerb
+    reacVals$filenameVar <- "image"
 
     reacVals$inserted <- reacVals$insertedTr <- FALSE
     reacVals$colVisInTab <-
