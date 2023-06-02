@@ -1,8 +1,8 @@
 Package: modoma
 Type: Package
 Title: Analysis of flower images
-Version: 0.1.6
-Date: 2023-03-14
+Version: 1.0.0
+Date: 2023-06-02
 Author: Ron Wehrens and Bart-Jan van Rossum
 Maintainer: Ron Wehrens <ron.wehrens@gmail.com>
 Description: The goal is to automatically obtain variety characteristics for 
@@ -31,6 +31,6 @@ Imports: colorspace,
     stats,
     tiff,
     utils
-License: Dunno
+License: GPL3
 Encoding: UTF-8
 RoxygenNote: 7.2.3
