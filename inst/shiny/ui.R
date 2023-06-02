@@ -6,7 +6,7 @@ shinyUI(
     id = "tabs",
     theme = shinytheme("cerulean"),
     #htmltools::includeScript("./www/text.js"),
-    tabPanel(title = "Data load",
+    tabPanel(title = "Data",
              ## The lines below have to be somewhere in the ui part of the app.
              ## Putting them here is somewhat random.
              shinyjs::useShinyjs(),

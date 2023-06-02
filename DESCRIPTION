@@ -1,7 +1,7 @@
 Package: modoma
 Type: Package
 Title: Analysis of flower images
-Version: 1.0.0
+Version: 1.0.1
 Date: 2023-06-02
 Author: Ron Wehrens and Bart-Jan van Rossum
 Maintainer: Ron Wehrens <ron.wehrens@gmail.com>
@@ -34,3 +34,4 @@ Imports: colorspace,
 License: GPL3
 Encoding: UTF-8
 RoxygenNote: 7.2.3
+LazyData: true

@@ -57,7 +57,9 @@ shinyServer(function(input,
     # removeUI("#resTab")
     # removeUI("#resTabTr")
 
+    data(florGerb)
     inputDat <- florGerb
+    RHScols <- colnames(inputDat)[sapply(inputDat, class) == "RHS"]
     reacVals$filenameVar <- "image"
 
     reacVals$inserted <- reacVals$insertedTr <- FALSE
