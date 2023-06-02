@@ -1,0 +1,175 @@
+/* Setting for general page layout */
+.col-sm-4 {
+  max-width: 450px;
+}
+.nav-tabs {
+  margin-bottom: 10px;
+}
+
+/* Settings for displaying download indicator */
+.btn-loading-container {
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+.btn-done-indicator {
+  color: green;
+}
+.btn-err {
+  margin-top: 10px;
+  color: red;
+}
+
+/* Settings for outlining notification messages from shiny */
+.shiny-notification {
+  width: 500px;
+  position: fixed;
+  top: calc(50%);
+  left: calc(50% - 250px);
+}
+
+/* Settings for displaying inputSelects inline */
+.inline-select {
+  display: table;
+  width: 100%;
+}
+.inline-select label, .inline-select .control-label, .inline-select .selectize-control, .inline-select .form-control {
+  display: table-cell;
+  vertical-align: middle;
+}
+.inline-select .control-label, .inline-select label {
+  width: 40%;
+}
+.inline-select .form-group {
+  display: table-row;
+}
+.inline-select .selectize-control {
+   width: 10000px;
+}
+
+/* Settings for displaying inputSelects inline with wide dropdown/no labels*/
+.inline-select-wide .control-label, .inline-select label {
+   width: 0;
+}
+
+/* Settings for displaying info for hover tooltips */
+.tooltip-hover {
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+  background-color: rgba(245, 245, 245, 0.85);
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+/* Settings for validation errors */
+.shiny-output-error-validation {
+  color: red;
+}
+
+/* Settings for warning messages */
+.warning-msg {
+  color: orange;
+}
+
+/* Settings for error messages */
+.error-msg {
+  color: red;
+}
+
+/* Settings for icons */
+.fa {
+  color: orange;
+}
+
+/* Settings for buttons */
+.action-button, .btn-primary {
+  color: white;
+}
+
+/* Settings for logo (dashboard header title) */
+.main-header .logo {
+  text-align: left;
+}
+
+/* Settings for background color */
+.content-wrapper, .right-side {
+  background-color: white;
+}
+
+/* Settings for out-of-range numeric inputs */
+input:out-of-range {
+  background-color: #FFCCCC;
+}
+
+/* Settings for displaying content of datatables without unwanted wrapping */
+td {
+  white-space: nowrap;
+}
+th {
+  vertical-align: bottom;
+}
+
+/* Settings for hr */
+hr {
+  border-color: darkblue;
+  height: 2px;
+}
+
+/* Settings for rescaling images */
+img {
+    transition:transform 0.25s ease;
+}
+
+img:hover {
+    -webkit-transform:scale(10);
+    transform:scale(10);
+}
+
+/* Settings for buttons in data.table */
+button.dt-button {
+  background: grey50 !important;
+}
+
+button.dt-button.active {
+  background: #2fa4e7 !important;
+  color: white !important;
+}
+
+.paginate_button {
+  background: linear-gradient(to bottom, rgba(230, 230, 230, 0.1) 0%,
+  rgba(0, 0, 0, 0.1) 100%) !important;
+  border-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.paginate_button:hover {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+
+/* Left align data tables to assure header and table stay aligned when few
+columns are selected */
+.datatables .display {
+  margin-left: 0;
+}
+
+
+.datatables-scroll {
+   overflow-x: auto;
+   width: 100%;
+   max-height: 500px;
+}
+
+.datatables-scroll .dataTable thead tr th,
+.datatables-scroll thead tr td {
+  position: sticky;
+  background-color: #FFFFFF;
+}
+
+.datatables-scroll thead tr th {
+  top: 0;
+}
+
+.datatables-scroll thead tr td {
+  top: 2.45em;
+}
+

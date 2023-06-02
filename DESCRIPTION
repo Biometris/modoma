@@ -1,0 +1,36 @@
+Package: modoma
+Type: Package
+Title: Analysis of flower images
+Version: 0.1.6
+Date: 2023-03-14
+Author: Ron Wehrens and Bart-Jan van Rossum
+Maintainer: Ron Wehrens <ron.wehrens@gmail.com>
+Description: The goal is to automatically obtain variety characteristics for 
+    roses and gerberas on the basis of (standardized) flower images. The package
+    also contains functionality to compare varieties on the basis of these 
+    characteristics with database records.
+Depends: R (>= 4.0)
+Imports: colorspace,
+    DT (>= 0.21),
+    fpc,
+    graphics,
+    grDevices,
+    grid,
+    jpeg,
+    knitr,
+    mclust,
+    methods,
+    plotly,
+    png,
+    readxl,
+    shiny,
+    shinycssloaders,
+    shinyFiles,
+    shinyjs,
+    shinythemes,
+    stats,
+    tiff,
+    utils
+License: Dunno
+Encoding: UTF-8
+RoxygenNote: 7.2.3
