@@ -12,34 +12,36 @@ shinyUI(
              shinyjs::useShinyjs(),
              tags$head(tags$link(rel = "stylesheet", type = "text/css",
                                  href = "custom.css")),
-             tags$script(src ='//d3js.org/d3.v3.min.js'),
-             # column(width = 2,
-             #        h1("Load your data"),
-             #        ## Select input file.
-             #        fileInput(inputId = "infile",
-             #                  label = "Choose file",
-             #                  accept = c(".csv", ".txt", ".xlsx"),
-             #                  width = "80%"),
-             #        shinyDirButton(id = "imageDir",
-             #                       label = "Select image directory",
-             #                       title = "Selected",
-             #                       class = "btn-primary") #,
-             #        # tags$div(class="form-group shiny-input-container",
-             #        #          tags$div(tags$label("File input")),
-             #        #          tags$div(tags$label("Choose folder",
-             #        #                              class = "btn btn-primary",
-             #        #                              tags$input(id = "fileIn",
-             #        #                                         webkitdirectory = TRUE, type = "file", style="display: none;", onchange = "pressed()"))),
-             #        #          tags$label("No folder choosen", id = "noFile"),
-             #        #          tags$div(id="fileIn_progress", class="progress progress-striped active shiny-file-input-progress",
-             #        #                   tags$div(class="progress-bar")
-             #        #          )
-             #        # )
-             # ),
-             column(width = 1),
-             column(width = 11,
-                    div(#style = "width:100%;",
-                      shinycssloaders::withSpinner(dataTableOutput("inTab")))
+             tags$script(src = "//d3js.org/d3.v3.min.js"),
+             fluidRow(
+               column(width = 2 - demoApp ,
+                      conditionalPanel(condition = "!output.demoApp",
+                                       h1("Load your data"),
+                                       ## Select input file.
+                                       fileInput(inputId = "infile",
+                                                 label = "Choose file",
+                                                 accept = c(".csv", ".txt", ".xlsx"),
+                                                 width = "80%"),
+                                       shinyDirButton(id = "imageDir",
+                                                      label = "Select image directory",
+                                                      title = "Selected",
+                                                      class = "btn-primary") #,
+                                       # tags$div(class="form-group shiny-input-container",
+                                       #          tags$div(tags$label("File input")),
+                                       #          tags$div(tags$label("Choose folder",
+                                       #                              class = "btn btn-primary",
+                                       #                              tags$input(id = "fileIn",
+                                       #                                         webkitdirectory = TRUE, type = "file", style="display: none;", onchange = "pressed()"))),
+                                       #          tags$label("No folder choosen", id = "noFile"),
+                                       #          tags$div(id="fileIn_progress", class="progress progress-striped active shiny-file-input-progress",
+                                       #                   tags$div(class="progress-bar")
+                                       #          )
+                                       # )
+                      )),
+               column(width = 10 + demoApp,
+                      div(#style = "width:100%;",
+                        shinycssloaders::withSpinner(dataTableOutput("inTab")))
+               )
              ),
              #HTML("<script type='text/javascript' src='getFolders.js'></script>")
     ),
