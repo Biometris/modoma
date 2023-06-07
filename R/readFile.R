@@ -1,28 +1,33 @@
 ## Helper functions for reading external files and processing image data.
 
 #' @export
-readFile <- function(infile) {
+readFile <- function(infile,
+                     metafile,
+                     orderedFactMetafile) {
   ## Get meta data.
-  columnMeta <- read.csv("metadata/metadataColumns.csv")
-  orderedFactMeta <- read.csv("metadata/metadataOrderedFactors.csv")
+  columnMeta <- read.csv(metafile)
+  orderedFactMeta <- read.csv(orderedFactMetafile)
   ## Input file.
   indat <- read.csv(infile)
 
   for (colname in colnames(indat)) {
     idx <- match(colname, columnMeta$colname)
-    if (columnMeta[idx, "colType"] == "trait") {
+    if (length(columnMeta[idx, "colType"]) > 0 &&
+        columnMeta[idx, "colType"] == "trait") {
       ## Convert traits to correct class.
       colClass <- columnMeta[idx, "traitType"]
-      if (colClass == "factor") {
-        indat[[colname]] <- factor(indat[[colname]])
-      } else if (colClass == "ordered") {
-        ## Ordered factors get their levels from meta data.
-        idx.levs <- orderedFactMeta$levels == columnMeta[idx, "levels"]
-        indat[[colname]] <- factor(indat[[colname]], ordered = TRUE,
-                                   levels = orderedFactMeta[idx.levs, "value"])
-      } else if (colClass %in% c("color", "RHS")) {
-        ## Custom classes for color columns.
-        class(indat[[colname]]) <- colClass
+      if (length(colClass) > 0) {
+        if (colClass == "factor") {
+          indat[[colname]] <- factor(indat[[colname]])
+        } else if (colClass == "ordered") {
+          ## Ordered factors get their levels from meta data.
+          idx.levs <- orderedFactMeta$levels == columnMeta[idx, "levels"]
+          indat[[colname]] <- factor(indat[[colname]], ordered = TRUE,
+                                     levels = orderedFactMeta[idx.levs, "value"])
+        } else if (colClass %in% c("color", "RHS")) {
+          ## Custom classes for color columns.
+          class(indat[[colname]]) <- colClass
+        }
       }
     }
     colnames(indat)[colnames(indat) == colname] <-

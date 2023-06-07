@@ -293,28 +293,17 @@ getClosestPair <- function(indat,
 #' @export
 getClosestRef <- function(ref,
                           indat,
+                          refVar,
                           traits = NULL,
                           n = 1) {
-
-  columnMeta <- read.csv("metadata/metadataColumns.csv")
-  orderedFactMeta <- read.csv("metadata/metadataOrderedFactors.csv")
-  nonTraits <- columnMeta[columnMeta$colType != "trait", "colname"]
-
-  isFlor <- hasName(indat, "VKCNr")
-  refVar <- if (isFlor) "VKCNr" else "RVPnr"
-
   ## Checks.
   if (!ref %in% indat[[refVar]]) {
     stop("ref is not in column ", refVar, " in input file.\n")
   }
-  if (is.null(traits)) {
-    traits <- colnames(indat)[!colnames(indat) %in% nonTraits]
-  } else {
-    missTraits <- traits[!traits %in% colnames(indat)]
-    if (length(missTraits) > 0) {
-      stop("The following traits are not in the data:\n",
-           paste(missTraits, collapse = ", "), "\n")
-    }
+  missTraits <- traits[!traits %in% colnames(indat)]
+  if (length(missTraits) > 0) {
+    stop("The following traits are not in the data:\n",
+         paste(missTraits, collapse = ", "), "\n")
   }
 
   idx <- which(indat[[refVar]] == ref)
@@ -342,11 +331,9 @@ getClosestRef <- function(ref,
 #'
 #' @export
 getClosestTraits <- function(indat,
+                             refVar,
                              traitValues = NULL,
                              n = 1) {
-  isFlor <- hasName(indat, "VKCNr")
-  refVar <- if (isFlor) "VKCNr" else "RVPnr"
-
   ## Add fake observation to indat with traits we want to compare.
   newObs <- data.frame(id = "FAKEOBS",
                        traitValues,
@@ -358,7 +345,7 @@ getClosestTraits <- function(indat,
   matchDat <- rbind(matchDat, newObs)
 
   ## Get closest flower by matching on reference.
-  resDat <- getClosestRef(ref = "FAKEOBS", indat = matchDat,
+  resDat <- getClosestRef(ref = "FAKEOBS", indat = matchDat, refVar = refVar,
                           traits = names(traitValues), n = n)
 
   ## Subset from input data to get all columns.

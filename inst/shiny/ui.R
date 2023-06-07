@@ -15,7 +15,7 @@ shinyUI(
              tags$script(src = "//d3js.org/d3.v3.min.js"),
              p("In the project Modoma (MOrphological Descriptors of Ornamentals through MAchine learning, 2021-2023) Floricode, Naktuinbouw and Biometris/Wageningen University & Research investigated the potential of Artificial Intelligence for obtaining flower characteristics for rose and gerbera varieties. These characteristics are important for growers as well as consumers, forming an unambiguous and full description of flower varieties. In addition, such characteristics play an important role in distinctness, uniformity and stability (DUS) testing. Automation, even partially, of the process has many benefits, such as objectivity and stability, and would allow the process to be decentralized to a large extent."),
              p("Once a database of flower characteristics is available, it can be used in a variety of ways. This application provides some examples, using gerbera data from Floricode. In the next tabs you can inspect the data, find flowers in the database that are most similar to a particular flower, picked by the user, or find flowers in the database that are closest to a set of values for characteristics, selected by the user. The final tab provides a full overview of all flowers in the database, arranged in two dimensions. It is based on a technique called Principal Coordinate Analysis, which aims to reproduce the calculated distances between flowers (based on the flower characteristics) in two dimensions."),
-             p("If you are interested to learn more about this app or about the Modoma project, feel free to contact Ron Wehrens (", a("ron.wehrens@wur.nl"), ")")
+             p("If you are interested to learn more about this app or about the Modoma project, feel free to contact Ron Wehrens (", a("mailto:ron.wehrens@wur.nl"), ")")
     ),
     tabPanel(title = "Data",
              fluidRow(
@@ -24,8 +24,16 @@ shinyUI(
                                        h1("Load your data"),
                                        ## Select input file.
                                        fileInput(inputId = "infile",
-                                                 label = "Choose file",
-                                                 accept = c(".csv", ".txt", ".xlsx"),
+                                                 label = "Choose file with data",
+                                                 accept = c(".csv", ".txt"),
+                                                 width = "80%"),
+                                       fileInput(inputId = "infilemeta",
+                                                 label = "Choose file with meta data",
+                                                 accept = c(".csv", ".txt"),
+                                                 width = "80%"),
+                                       fileInput(inputId = "infileOrderedFactmeta",
+                                                 label = "Choose file with meta data on ordered factors",
+                                                 accept = c(".csv", ".txt"),
                                                  width = "80%"),
                                        shinyDirButton(id = "imageDir",
                                                       label = "Select image directory",

@@ -21,10 +21,13 @@ function(input,
   ## The columns contain the corresponding hex color used as background.
   inputDat <- reactive({
     if (!demoApp) {
-      req(input$infile, !inherits(input$imageDir, "shinyActionButtonValue"))
+      req(input$infile, input$infilemeta, input$infileOrderedFactmeta,
+          !inherits(input$imageDir, "shinyActionButtonValue"))
 
       ## Read input.
-      inputDat <- try(readFile(input$infile$datapath))
+      inputDat <- try(readFile(input$infile$datapath,
+                               input$infilemeta$datapath,
+                               input$infileOrderedFactmeta$datapath))
       if (inherits(inputDat, "try-error")) {
         shinyjs::alert("Error trying to read file.\n Please check the settings.")
       }
@@ -81,15 +84,29 @@ function(input,
   ## Get the column name that contains the reference variable.
   ## This differs for Floricode and nak.
   refVar <- reactive({
-    req(inputDat())
-    ## Check if file is Floricode or nak.
-    isFlor <- hasName(inputDat(), "VKCNr")
-    if (isFlor) "VKCNr" else "RVPnr"
+    if (!demoApp) {
+      req(inputDat())
+
+      ## Get id column from metadata.
+      columnMeta <- read.csv(input$infilemeta$datapath)
+      columnMeta <- columnMeta[columnMeta$colname %in% colnames(inputDat()), ]
+      columnMeta[columnMeta$colType == "id", "colname"]
+    } else {
+      "VKCNr"
+    }
   })
 
   nonTraits <- reactive({
-    c("rasnummer", "RVPnr", "VBN_CODE","VBN_PRODUCTNAAM_NL", "VKCNr",
-      reacVals$filenameVar)
+    if (!demoApp) {
+      req(inputDat())
+
+      columnMeta <- read.csv(input$infilemeta$datapath)
+
+      c(columnMeta[columnMeta$colType != "trait", "colname"],
+        reacVals$filenameVar)
+    } else {
+      c("VBN_CODE", "VBN_PRODUCTNAAM_NL", "VKCNr", "image")
+    }
   })
 
   ## Extract all trait columns from input data.
@@ -220,6 +237,7 @@ function(input,
     withBusyIndicatorServer("matchBtn", session = session, {
       res <- getClosestRef(ref = input$ref,
                            indat = inputDat(),
+                           refVar = refVar(),
                            traits = input$compCols,
                            n = input$numComp)
     })
@@ -311,6 +329,7 @@ function(input,
       }, simplify = FALSE)
 
       res <- getClosestTraits(indat = inputDat(),
+                              refVar = refVar(),
                               traitValues = traitValues,
                               n = input$numCompTr)
     })
