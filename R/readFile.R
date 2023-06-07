@@ -10,7 +10,7 @@ readFile <- function(infile) {
 
   for (colname in colnames(indat)) {
     idx <- match(colname, columnMeta$colname)
-    if (columnMeta[idx, "trait"] == "Yes") {
+    if (columnMeta[idx, "colType"] == "trait") {
       ## Convert traits to correct class.
       colClass <- columnMeta[idx, "traitType"]
       if (colClass == "factor") {

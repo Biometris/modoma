@@ -273,7 +273,7 @@ getClosestPair <- function(indat,
 
   columnMeta <- read.csv("metadata/metadataColumns.csv")
   orderedFactMeta <- read.csv("metadata/metadataOrderedFactors.csv")
-  nonTraits <- columnMeta[columnMeta$trait == "No", "colname"]
+  nonTraits <- columnMeta[columnMeta$colType != "trait", "colname"]
 
   dmat <- as.matrix(dfdist(indat[, !colnames(indat) %in% nonTraits]))
   dimnames(dmat) <- list(indat[, idCol], indat[, idCol])
@@ -298,7 +298,7 @@ getClosestRef <- function(ref,
 
   columnMeta <- read.csv("metadata/metadataColumns.csv")
   orderedFactMeta <- read.csv("metadata/metadataOrderedFactors.csv")
-  nonTraits <- columnMeta[columnMeta$trait == "No", "colname"]
+  nonTraits <- columnMeta[columnMeta$colType != "trait", "colname"]
 
   isFlor <- hasName(indat, "VKCNr")
   refVar <- if (isFlor) "VKCNr" else "RVPnr"
