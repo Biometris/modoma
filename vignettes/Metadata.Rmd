@@ -14,10 +14,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(modoma)
-```
-
 De app ontwikkeld in het Modoma project is in eerste instantie ontwikkeld voor gebruik met vier datasets: FloricodeGerbera, FloricodeRose, NaktuinbouwGerbera en NaktuinbouwRose. Het is echter ook mogelijk om de app te gebruiken voor andere datasets met data voor bijvoorbeeld andere gewassen. Om dit te kunnen doen moeten deze datasets aan een aantal voorwaarden voldoen en er moet een zogeheten metadata bestand behorend bij de dataset beschikbaar zijn. Dit metadata bestand beschrijft welke kolommen in de data welke informatie bevatten en hoe deze informatie in de app geïnterpreteerd moet worden. Dit is voornamelijk van belang bij het berekenen van afstanden tussen de verschillende variëteiten.
 
 Dit document beschrijft de voorwaarden waaraan een nieuwe dataset moet voldoen en zal een stap voor stap beschrijving geven van het maken van een metadata bestand dat door de app gebruikt kan worden. Hierbij zal de FloricodeGerbera data als voorbeeld worden gebruikt. Voor een handleiding voor het gebruik van de app zie .........

@@ -3,8 +3,11 @@ title: "Handleiding Modoma app"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Manual}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r, include = FALSE}
@@ -12,10 +15,6 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-```
-
-```{r setup}
-library(modoma)
 ```
 
 In het Modoma project (2021-2023) hebben Floricode, Naktuinbouw en
@@ -91,7 +90,6 @@ De app bestaat uit een aantal afzonderlijke tabbladen:
 In het vervolg van dit document worden de tabbladen één voor één
 besproken.
 
-
 ### Data load
 
 Op het eerste tabblad, "Data load" kunnen de data en de bijbehorende
@@ -111,7 +109,7 @@ analyses die op de volgende tabbladen kunnen worden uitgevoerd.
     het data bestand naar de bestanden met afbeeldingen in de tabel zijn
     vervangen door de afbeeldingen zelf.
 
-![](DataLoadTable.png)
+![](DataLoadTable.png){width="850"}
 
 In de tabel kan op verschillende manieren verder ingezoomd worden op
 verschillende aspecten van de data.
@@ -200,7 +198,7 @@ zichtbaar te maken in "Column visibility". De kolomzichtbaarheid is
 gekoppeld aan die op het eerste tabblad. Kolommen die hier zichtbaar
 gemaakt worden, worden dat ook op tabblad één en vice versa.
 
-![](MatchRef.png)
+![](MatchRef.png){width="850"}
 
 ### Matching by trait
 
@@ -238,7 +236,7 @@ Ook de zichtbare kolommen in deze tabel zijn nu gekoppeld met die op de
 eerdere tabbladen. Verbergen of zichtbaar maken van kolommen op het ene
 tabblad zal hetzelfde doen op de andere twee tabbladen.
 
-![](MatchTrait.png)
+![](MatchTrait.png){width="850"}
 
 ### PCoA
 
