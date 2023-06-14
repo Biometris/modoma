@@ -5,9 +5,9 @@ account: rossu027
 server: shiny.wur.nl
 hostUrl: https://shiny.wur.nl/__api__
 appId: 262
-bundleId: 1578
+bundleId: 1657
 url: https://shiny.wur.nl/content/f1eaf4e0-413c-4699-ad05-51333030679f/
-when: 1685698761.23247
-lastSyncTime: 1685698761.23248
+when: 1686665612.15722
+lastSyncTime: 1686665612.15723
 asMultiple: FALSE
 asStatic: FALSE

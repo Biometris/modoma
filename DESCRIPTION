@@ -35,3 +35,6 @@ License: GPL3
 Encoding: UTF-8
 RoxygenNote: 7.2.3
 LazyData: true
+Suggests: 
+    rmarkdown
+VignetteBuilder: knitr
