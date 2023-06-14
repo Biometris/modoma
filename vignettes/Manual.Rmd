@@ -43,36 +43,26 @@ stappen:
 1)  Installeer R op je computer. Uitgebreide instructies voor alle
     besturingssystemen zijn te vinden op <https://cran.r-project.org/>.
     Voor Windows komt het er op neer dat je de installatie-executable
-    downloadt
-    (<https://cran.r-project.org/bin/windows/base/R-4.3.0-win.exe>) en
+    downloadt voor de meest recente versie van R
+    (op het moment van schrijven <https://cran.r-project.org/bin/windows/base/R-4.3.0-win.exe>) en
     installeert door te dubbelklikken - binnen een beschermde omgeving
     kan het zijn dat IT support daarbij moet helpen voor de permissies.
 
-2)  Save het modoma_1.0.0.tar.gz bestand op een plek op je harde schijf,
-    in Windows bijvoorbeeld in de nieuwe map "C:/Rsoftware".
-
-3)  Start R op, en type op de command line het volgende:
+2)  Start R op, en installeer het modoma pakket door op de command line het volgende te draaien:
 
 ``` r
 install.packages("remotes")
-remotes::install_local(path_to_file, dependencies = TRUE)
+remotes::install_github("Biometris/modoma", dependencies = TRUE)
 ```
 
-waarbij path_to_file vervangen moet worden door de plek waar het modoma
-bestand is opgeslagen, in Windows bijvoorbeeld:
-
-``` r
-remotes::install_local("C:/Rsoftware/modoma_1.0.0.tar.gz", dependencies = TRUE)
-```
-
-4)  Nu is het modoma pakket beschikbaar. Het kan worden opgeroepen door
+3)  Nu is het modoma pakket beschikbaar. Het kan worden opgeroepen door
     het volgende commando in R te geven:
 
 ``` r
 library(modoma)
 ```
 
-5)  Tenslotte wordt de webpagina geopend door het volgende commando:
+4)  Tenslotte wordt de webpagina geopend door het volgende commando:
 
 ``` r
 launch()
@@ -82,6 +72,7 @@ launch()
 
 De app bestaat uit een aantal afzonderlijke tabbladen:
 
+-   Introduction
 -   Data load
 -   Matching by reference
 -   Matching by trait
@@ -92,7 +83,7 @@ besproken.
 
 ### Data load
 
-Op het eerste tabblad, "Data load" kunnen de data en de bijbehorende
+Op het tabblad "Data load" kunnen de data en de bijbehorende
 afbeeldingen worden ingelezen. De ingelezen data vormt de basis voor de
 analyses die op de volgende tabbladen kunnen worden uitgevoerd.
 
