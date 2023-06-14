@@ -1,0 +1,22 @@
+template:
+  bootstrap: 5
+
+navbar:
+  title: "Modoma"
+  left:
+    - icon: fa-home
+      href: index.html
+    - text: "Handleidingen"
+      href: articles/index.html
+  right:
+    - icon: fa-github fa-lg fab
+      text: "github"
+      href: https://github.com/Biometris/modoma
+
+articles:
+  - title: "Handleidingen"
+    contents:
+      - Manual
+      - Metadata
+
+

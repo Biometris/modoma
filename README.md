@@ -14,7 +14,7 @@ records vergelijken, en je kunt een set waardes definieren voor een
 subset van de kenmerken, en dan kijken welke records daar het meest op
 lijken.
 
-Er is een demo app beschikbaar via shiny.wur.nl/modoma  
+Er is een demo app beschikbaar via <https::/shiny.wur.nl/modoma>  
 In deze app is de Floricode Gerbera data al ingelezen en kan snel een
 overzicht worden gekregen van de mogelijkheden van de app. Voor een
 uitgebreidere versie waarin ook eigen datasets kunnen worden ingelezen,

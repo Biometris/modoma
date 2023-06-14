@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 De app ontwikkeld in het Modoma project is in eerste instantie ontwikkeld voor gebruik met vier datasets: FloricodeGerbera, FloricodeRose, NaktuinbouwGerbera en NaktuinbouwRose. Het is echter ook mogelijk om de app te gebruiken voor andere datasets met data voor bijvoorbeeld andere gewassen. Om dit te kunnen doen moeten deze datasets aan een aantal voorwaarden voldoen en er moet een zogeheten metadata bestand behorend bij de dataset beschikbaar zijn. Dit metadata bestand beschrijft welke kolommen in de data welke informatie bevatten en hoe deze informatie in de app geïnterpreteerd moet worden. Dit is voornamelijk van belang bij het berekenen van afstanden tussen de verschillende variëteiten.
 
-Dit document beschrijft de voorwaarden waaraan een nieuwe dataset moet voldoen en zal een stap voor stap beschrijving geven van het maken van een metadata bestand dat door de app gebruikt kan worden. Hierbij zal de FloricodeGerbera data als voorbeeld worden gebruikt. Voor een handleiding voor het gebruik van de app zie .........
+Dit document beschrijft de voorwaarden waaraan een nieuwe dataset moet voldoen en zal een stap voor stap beschrijving geven van het maken van een metadata bestand dat door de app gebruikt kan worden. Hierbij zal de FloricodeGerbera data als voorbeeld worden gebruikt. Voor een algeme handleiding voor het gebruik van de app zie https://biometris.github.io/modoma/articles/Manual.html.
 
 ## Voorwaarden
 
@@ -42,7 +42,7 @@ We zien twee kolommen met een referentiecode, VBN_CODE en VKCNr. In de app wille
 
 ### Opzetten van een metadata bestand
 
-Het metadata bestand heeft een vaste structuur, een .csv bestand met daarin vijf kolommen, colname, colnameDisplay, colType, traitType, levels. Een verder leeg bestand met deze structuur is beschikbaar via ..... Door dit bestand als basis te gebruiken en verder in te vullen zal de structuur altijd herkend worden door de app.
+Het metadata bestand heeft een vaste structuur, een .csv bestand met daarin vijf kolommen, colname, colnameDisplay, colType, traitType, levels. Een verder leeg bestand met deze structuur is beschikbaar via https://github.com/Biometris/modoma/tree/main/metadata/metadataColumns.csv. Door dit bestand als basis te gebruiken en verder in te vullen zal de structuur altijd herkend worden door de app.
 
 De eerste stap is het toevoegen van alle kolommen in het nieuwe databestand in de kolom colname in het metadatabestand. Voor ons voorbeeld geeft dat dit:
 
@@ -62,7 +62,7 @@ De volgende stap is per kolom aangeven welk type informatie in de kolom wordt we
 
 ![](GerberaMeta3.png){width="508"}
 
-In de volgende stap gaan we per kenmerk aangeven wat voor type kenmerk het is. Dit is van belang omdat voor verschillende typen kenmerken afstanden op verschillende manieren berekend worden. Zie voor een uitgebreide uitleg hierover ....... De mogelijke waarden voor traitType zijn
+In de volgende stap gaan we per kenmerk aangeven wat voor type kenmerk het is. Dit is van belang omdat voor verschillende typen kenmerken afstanden op verschillende manieren berekend worden. Zie voor een uitgebreide uitleg hierover https://biometris.github.io/modoma/articles/Manual.html#gebruikte-afstandsmaten. De mogelijke waarden voor traitType zijn
 
 -   RHS - voor kolommen met RHS kleurcodes. In het voorbeeld is dit alleen de kolom BloemRHS
 
@@ -72,7 +72,7 @@ In de volgende stap gaan we per kenmerk aangeven wat voor type kenmerk het is. D
 
 ![](GerberaMeta4.png)
 
-Als laatste stap moeten we voor de kenmerken met als type ordered de volgorde van de categorieën van het betreffende kenmerk aangeven. Hiervoor gebruiken we een tweede bestand met metadata met drie kolommen, levels, value en level. De inhoud van dit bestand wordt in de app gekoppeld aan de metadata via de kolom levels. Ook voor dit bestand is een lege versie beschikbaar waar alleen de koppen zijn ingevuld via .......
+Als laatste stap moeten we voor de kenmerken met als type ordered de volgorde van de categorieën van het betreffende kenmerk aangeven. Hiervoor gebruiken we een tweede bestand met metadata met drie kolommen, levels, value en level. De inhoud van dit bestand wordt in de app gekoppeld aan de metadata via de kolom levels. Ook voor dit bestand is een lege versie beschikbaar waar alleen de koppen zijn ingevuld via https://github.com/Biometris/modoma/tree/main/metadata/metadataOrderedFactors.csv.
 
 We moeten nu eerst een naam geven aan de categorieën in de geordende factor Bloemtype. Er zijn geen restricties voor deze naam, maar voor de duidelijkheid is het handig een sprekende naam te kiezen. In dit geval hebben we gekozen om "bloemtype' te gebruiken. Dit komt dus in de kolom levels te staan in het metadata bestand. Daarmee is dit bestand volledig gevuld.
 
