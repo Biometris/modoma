@@ -24,7 +24,7 @@ Als deze app wordt gebruikt voor het bekijken van andere datasets dan de vier vo
 
 -   Er moet een kolom in de data aanwezig zijn waarin een unieke referentiecode per variëteit staat. De naam van deze kolom is irrelevant. Bij de Floricode bestanden is dit VKCNr en bij Naktuinbouw RVPnr.
 
--   Er moet een kolom in de data aanwezig zijn met daarin de naam van de file met de afbeelding van de variëteit. .tif en .jpg files ondersteund. De naam mag leeg zijn. Er zal dan geen afbeelding worden getoond. In zowel de Floricode als de naktuinbouw bestanden staan de verwijzingen naar de files met afbeeldingen in de kolom filename.
+-   Er moet een kolom in de data aanwezig zijn met daarin de naam van de file met de afbeelding van de variëteit. .tif en .jpg files worden ondersteund. De naam mag leeg zijn. Er zal dan geen afbeelding worden getoond. In zowel de Floricode als de naktuinbouw bestanden staan de verwijzingen naar de files met afbeeldingen in de kolom filename.
 
 ## Metadata bestand
 

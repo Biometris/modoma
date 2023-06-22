@@ -1,10 +1,18 @@
 Package: modoma
 Type: Package
 Title: Analysis of flower images
-Version: 1.0.2
-Date: 2023-06-07
-Author: Ron Wehrens and Bart-Jan van Rossum
-Maintainer: Ron Wehrens <ron.wehrens@gmail.com>
+Version: 1.0.3
+Date: 2023-06-22
+Authors@R: c(person(given = "Ron", 
+                    family = "Wehrens",
+                    email = "ron.wehrens@wur.nl",
+                    role = c("aut", "cre"),
+                    comment = c(ORCID = "0000-0002-8798-5599")),
+             person(given = "Bart-Jan",
+                    family = "van Rossum",
+                    role = "aut",
+                    comment = c(ORCID = "0000-0002-8673-2514"))
+            )
 Description: The goal is to automatically obtain variety characteristics for 
     roses and gerberas on the basis of (standardized) flower images. The package
     also contains functionality to compare varieties on the basis of these 
